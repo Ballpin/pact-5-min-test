@@ -1,0 +1,131 @@
+I, [2020-05-28T01:54:40.891370 #988]  INFO -- : Received request GET /
+D, [2020-05-28T01:54:40.891801 #988] DEBUG -- : {
+  "path": "/",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "docspactio-getting-started--mefellows.repl.co",
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Referer": "https://repl.it/@mefellows/docspactio-getting-started?lite=true",
+    "Sec-Fetch-Dest": "iframe",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Site": "cross-site",
+    "Upgrade-Insecure-Requests": "1",
+    "X-Forwarded-For": "35.191.1.33",
+    "X-Replit-User-Id": "",
+    "X-Replit-User-Name": "",
+    "X-Replit-User-Roles": "",
+    "Version": "HTTP/1.1"
+  }
+}
+E, [2020-05-28T01:54:40.891930 #988] ERROR -- : No matching interaction found for GET /
+E, [2020-05-28T01:54:40.891992 #988] ERROR -- : Interaction diffs for that route:
+E, [2020-05-28T01:54:40.892034 #988] ERROR -- : 
+I, [2020-05-28T01:54:40.900453 #988]  INFO -- : Received request GET /
+D, [2020-05-28T01:54:40.900878 #988] DEBUG -- : {
+  "path": "/",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "docspactio-getting-started--mefellows.repl.co",
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Referer": "https://repl.it/@mefellows/docspactio-getting-started?lite=true",
+    "Sec-Fetch-Dest": "iframe",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Site": "cross-site",
+    "Upgrade-Insecure-Requests": "1",
+    "X-Forwarded-For": "35.191.1.33",
+    "X-Replit-User-Id": "",
+    "X-Replit-User-Name": "",
+    "X-Replit-User-Roles": "",
+    "Version": "HTTP/1.1"
+  }
+}
+E, [2020-05-28T01:54:40.901051 #988] ERROR -- : No matching interaction found for GET /
+E, [2020-05-28T01:54:40.901112 #988] ERROR -- : Interaction diffs for that route:
+E, [2020-05-28T01:54:40.901163 #988] ERROR -- : 
+I, [2020-05-28T01:54:41.186644 #988]  INFO -- : Registered expected interaction GET /orders
+D, [2020-05-28T01:54:41.187228 #988] DEBUG -- : {
+  "description": "a request for orders",
+  "providerState": "there are orders",
+  "request": {
+    "method": "GET",
+    "path": "/orders"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "body": {
+      "json_class": "Pact::ArrayLike",
+      "contents": {
+        "id": 1,
+        "items": {
+          "json_class": "Pact::ArrayLike",
+          "contents": {
+            "name": "burger",
+            "quantity": 2,
+            "value": 100
+          },
+          "min": 1
+        }
+      },
+      "min": 1
+    }
+  }
+}
+I, [2020-05-28T01:54:41.244829 #988]  INFO -- : Received request GET /orders
+D, [2020-05-28T01:54:41.245156 #988] DEBUG -- : {
+  "path": "/orders",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:41279",
+    "Accept-Encoding": "gzip, deflate",
+    "Connection": "close",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2020-05-28T01:54:41.245861 #988]  INFO -- : Found matching response for GET /orders
+D, [2020-05-28T01:54:41.246247 #988] DEBUG -- : {
+  "status": 200,
+  "headers": {
+    "Content-Type": "application/json; charset=utf-8"
+  },
+  "body": {
+    "json_class": "Pact::ArrayLike",
+    "contents": {
+      "id": 1,
+      "items": {
+        "json_class": "Pact::ArrayLike",
+        "contents": {
+          "name": "burger",
+          "quantity": 2,
+          "value": 100
+        },
+        "min": 1
+      }
+    },
+    "min": 1
+  }
+}
+W, [2020-05-28T01:54:41.267699 #988]  WARN -- : Verifying - actual interactions do not match expected interactions. 
+Unexpected requests:
+	GET /
+	GET /
+
+
+W, [2020-05-28T01:54:41.267847 #988]  WARN -- : Unexpected requests:
+	GET /
+	GET /
+
+
+I, [2020-05-28T01:54:41.278086 #988]  INFO -- : Cleared interactions
+I, [2020-05-28T01:54:41.331371 #988]  INFO -- : Writing pact for GettingStartedOrderApi to /home/runner/docspactio-getting-started/pacts/gettingstartedorderweb-gettingstartedorderapi.json
